@@ -12,3 +12,59 @@ body {
   font-size: 14px;
   line-height: 27px;
 }
+
+section {
+  display: block;
+  position: relative;
+  padding: 50px 0;
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.col-3 {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+.product-item {
+  text-align: center;
+}
+.product-thumb img {
+  max-width: 100%;
+  height: auto;
+}
+.icons-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.icon-item {
+  text-align: center;
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+/* Sterne für Bewertung */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.rating .star {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+.rating .star.active,
+.rating .star:hover {
+  color: gold;
+}
