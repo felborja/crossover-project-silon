@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Silo Store</title>
   </head>
   <body>
@@ -26,7 +32,7 @@
     <!-- Banner section end (KAPIL) -->
 
     <!-- Featured Product start (SANID) -->
-    <section class="pt-14 mx-auto max-w-7xl">
+    <section class="py-14 mx-auto max-w-7xl">
       <h2 class="text-center font-bold text-4xl">FEATURED PRODUCT</h2>
       <div class="pt-24 grid gap-x-4 grid-cols-3">
         <div class="flex flex-col gap-y-px items-center">
@@ -88,13 +94,21 @@
     <!-- Featured Product end (SANID) -->
 
     <!-- Banner 02 section start (SANID) -->
-    <section>
-      <div>
-        <h3>50% OFF</h3>
-        <p>ALL WOMEN’S COLLECTION</p>
-        <button>SHOP NOW</button>
+    <section
+      class="bg-[#eae2d8] flex flex-wrap md:flex-nowrap items-center justify-center gap-x-1 pt-4 mx-auto px-8"
+    >
+      <div class="flex flex-col items-center gap-y-12 w-full">
+        <h3 style="font-family: 'Dancing Script', cursive" class="text-6xl">
+          50% OFF
+        </h3>
+        <p class="text-2xl">ALL WOMEN’S COLLECTION</p>
+        <button
+          class="text-white bg-[#ff5353] px-12 py-4 rounded-md font-semibold hover:bg-white hover:text-[#007bff] transition-all duration-300 ease-in-out"
+        >
+          SHOP NOW
+        </button>
       </div>
-      <figure>
+      <figure class="w-full h-auto">
         <img src="https://demo.themeies.com/silon/images/ban-2.png" alt="" />
       </figure>
     </section>
