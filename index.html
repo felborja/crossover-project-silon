@@ -3,113 +3,237 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Popular Products</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <title>Silo Store</title>
+    <style>
+      section {
+        display: block;
+        position: relative;
+        padding: 50px 0;
+        width: 100%;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .product-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; /* Zentriert die Produktbilder horizontal */
+      }
+
+      .col-3 {
+        flex: 0 0 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+      }
+
+      .product-item {
+        text-align: center;
+      }
+
+      .product-thumb img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .icons-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .icon-item {
+        text-align: center;
+        flex: 0 0 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+      }
+
+      /* Sterne für Bewertung */
+      .rating {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .rating .star {
+        font-size: 24px;
+        color: #ccc;
+        cursor: pointer;
+      }
+
+      .rating .star.active,
+      .rating .star:hover {
+        color: gold;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header start (KAPIL) -->
-    <header>
-      <nav></nav>
-    </header>
-    <!-- Header ends (KAPIL) -->
-
-    <!-- Banner section start (KAPIL) -->
-    <section></section>
-    <!-- Banner section end (KAPIL) -->
-
-    <!-- Featured Product start (SANID) -->
-    <section>
-      <h2>FEATURED PRODUCT</h2>
-      <div>
-        <div>
-          <div>
-            <figure>
-              <img
-                src="https://demo.themeies.com/silon/images/products/1.jpg"
-                alt=""
-              />
-            </figure>
-            <div><a href="">V</a><a href="">H</a><a href="">C</a></div>
-          </div>
-          <a href="">Red Women Purses</a>
-          <span><img src="" alt="" /></span>
-          <p>$35</p>
+    <section class="popular-products">
+      <div class="container">
+        <div class="sec-heading">
+          <h3 class="sec-title">Most popular</h3>
         </div>
-        <div>
-          <div>
-            <figure>
-              <img
-                src="https://demo.themeies.com/silon/images/products/2.jpg"
-                alt=""
-              />
-            </figure>
-            <div><a href="">V</a><a href="">H</a><a href="">C</a></div>
+        <div class="row product-row">
+          <div class="col-3">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="4.webp" alt="Handtasche" />
+              </figure>
+              <div class="product-content">
+                <p>Frauenhandtasche</p>
+                <p>$35.00</p>
+                <div class="rating">
+                  <span class="star" data-value="1">&#9733;</span>
+                  <span class="star" data-value="2">&#9733;</span>
+                  <span class="star" data-value="3">&#9733;</span>
+                  <span class="star" data-value="4">&#9733;</span>
+                  <span class="star" data-value="5">&#9733;</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <a href="">Red Women Purses</a>
-          <span><img src="" alt="" /></span>
-          <p>$35</p>
+          <div class="col-3">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="5.webp" alt="Pinke Tasche" />
+              </figure>
+              <div class="product-content">
+                <p>Pinke Tasche</p>
+                <p>$35.00</p>
+                <div class="rating">
+                  <span class="star" data-value="1">&#9733;</span>
+                  <span class="star" data-value="2">&#9733;</span>
+                  <span class="star" data-value="3">&#9733;</span>
+                  <span class="star" data-value="4">&#9733;</span>
+                  <span class="star" data-value="5">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="6.webp" alt="High Heels" />
+              </figure>
+              <div class="product-content">
+                <p>High Heels</p>
+                <p>$35.00</p>
+                <div class="rating">
+                  <span class="star" data-value="1">&#9733;</span>
+                  <span class="star" data-value="2">&#9733;</span>
+                  <span class="star" data-value="3">&#9733;</span>
+                  <span class="star" data-value="4">&#9733;</span>
+                  <span class="star" data-value="5">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="7.webp" alt="Blaue Sonnenbrille" />
+              </figure>
+              <div class="product-content">
+                <p>Blaue Sonnenbrille</p>
+                <p>$35.00</p>
+                <div class="rating">
+                  <span class="star" data-value="1">&#9733;</span>
+                  <span class="star" data-value="2">&#9733;</span>
+                  <span class="star" data-value="3">&#9733;</span>
+                  <span class="star" data-value="4">&#9733;</span>
+                  <span class="star" data-value="5">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div>
-            <figure>
-              <img
-                src="https://demo.themeies.com/silon/images/products/3.jpg"
-                alt=""
-              />
-            </figure>
-            <div><a href="">V</a><a href="">H</a><a href="">C</a></div>
+        <div class="row icons-section">
+          <div class="col-3 icon-item">
+            <img
+              src="https://demo.themeies.com/silon/images/feature-icons/1.png"
+              alt=""
+            />
+            <p>MONEY BACK GUARANTEE<br />Great fill signs he evening</p>
           </div>
-          <a href="">Red Women Purses</a>
-          <span><img src="" alt="" /></span>
-          <p>$35</p>
+          <div class="col-3 icon-item">
+            <img
+              src="https://demo.themeies.com/silon/images/feature-icons/2.png"
+              alt=""
+            />
+            <p>FREE DELIVERY<br />Great fill signs he evening</p>
+          </div>
+          <div class="col-3 icon-item">
+            <img
+              src="https://demo.themeies.com/silon/images/feature-icons/3.png"
+              alt=""
+            />
+            <p>ALWAY SUPPORT<br />Great fill signs he evening</p>
+          </div>
+          <div class="col-3 icon-item">
+            <img
+              src="https://demo.themeies.com/silon/images/feature-icons/4.png"
+              alt=""
+            />
+            <p>SECURE PAYMENT<br />Great fill signs he evening</p>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Featured Product end (SANID) -->
 
-    <!-- Banner 02 section start (SANID) -->
-    <section>
-      <div>
-        <h3>50% OFF</h3>
-        <p>ALL WOMEN’S COLLECTION</p>
-        <button>SHOP NOW</button>
-      </div>
-      <figure>
-        <img src="https://demo.themeies.com/silon/images/ban-2.png" alt="" />
-      </figure>
-    </section>
-    <!-- Banner 02 section end (SANID) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".rating .star");
 
-    <!-- Popular products start (KEMAL) -->
-    <section></section>
-    <!-- Popular products end (KEMAL) -->
+        stars.forEach((star) => {
+          star.addEventListener("mouseover", function () {
+            const value = parseInt(star.getAttribute("data-value"));
+            highlightStars(value);
+          });
 
-    <!-- Features section start (KEMAL) -->
-    <section></section>
-    <!-- Features section end (KEMAL) -->
+          star.addEventListener("mouseleave", function () {
+            resetStars();
+          });
 
-    <!--Trending Products start (KEMAL) -->
-    <section></section>
-    <!--Trending Products end (KEMAL) -->
+          star.addEventListener("click", function () {
+            const value = parseInt(star.getAttribute("data-value"));
+            alert(`You rated this product ${value} stars!`);
+          });
+        });
 
-    <!-- Silon Journal start (Felipe) -->
-    <section></section>
-    <!-- Blog post end (Felipe) -->
+        function highlightStars(value) {
+          stars.forEach((star) => {
+            const starValue = parseInt(star.getAttribute("data-value"));
+            if (starValue <= value) {
+              star.classList.add("active");
+            } else {
+              star.classList.remove("active");
+            }
+          });
+        }
 
-    <!-- Follow Us start (Felipe) -->
-    <section></section>
-    <!-- Instagram end (Felipe) -->
-
-    <!-- Footer strat (KAPIL) -->
-    <footer></footer>
-    <!-- Footer end (KAPIL) -->
+        function resetStars() {
+          stars.forEach((star) => {
+            star.classList.remove("active");
+          });
+        }
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
